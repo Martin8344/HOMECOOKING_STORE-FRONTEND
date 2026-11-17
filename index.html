@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCooking - Household & Kitchenware Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <img src="images/homecooking.jpg" alt="HomeCooking Logo" class="logo-img">
+                <span class="logo-text">HOME<span class="orange-text">COOKING</span></span>
+            </a>
+
+            <nav id="nav-menu" class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#offers" class="nav-link">Offers</a>
+                    </li>
+                    <li id="categories-dropdown" class="nav-item dropdown">
+                        <a href="#" id="categories-toggle" class="nav-link">Categories &#9662;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#glassware" class="dropdown-link">Glassware</a></li>
+                            <li><a href="#sets" class="dropdown-link">Cookware Sets</a></li>
+                            <li><a href="#utensils" class="dropdown-link">Kitchen Utensils</a></li>
+                            <li><a href="#plastics" class="dropdown-link">Plastics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div id="cart-wrapper" class="cart-wrapper">
+                    <button id="cart-toggle" class="cart-box" type="button">
+                        <span class="cart-label">Cart:</span>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </button>
+
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <h3 class="cart-dropdown-title">Selected Items</h3>
+                        <div id="cart-items" class="cart-items">
+                            <p class="empty-cart">Your cart is empty.</p>
+                        </div>
+                        <div class="cart-total-row">
+                            <span>Total:</span>
+                            <span id="cart-total" class="cart-total-price">0 LE</span>
+                        </div>
+                        <button id="continue-shipping-btn" class="continue-btn" type="button">Continue Shipping</button>
+                    </div>
+                </div>
+
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="shipping-modal" class="shipping-modal">
+        <div class="shipping-box">
+            <h3 class="shipping-title">Shipping Details</h3>
+            <p class="shipping-subtitle">Please enter your delivery information to complete your order</p>
+            <form id="shipping-form" class="shipping-form">
+                <input type="text" id="ship-name" class="form-input" placeholder="Full Name" required>
+                <input type="tel" id="ship-phone" class="form-input" placeholder="Phone Number" required>
+                <input type="text" id="ship-city" class="form-input" placeholder="Governorate / City" required>
+                <input type="text" id="ship-address" class="form-input" placeholder="Detailed Street Address" required>
+                <div class="shipping-actions">
+                    <button type="submit" class="btn btn-primary full-width">Confirm Order</button>
+                    <button type="button" id="close-shipping" class="close-modal-btn full-width">Cancel</button>
+                </div>
+                <p id="shipping-status" class="form-status"></p>
+            </form>
+        </div>
+    </div>
+
+    <section id="home" class="landing">
+        <div class="landing-overlay">
+            <div class="container landing-content">
+                <span class="badge">Modern Household Essentials</span>
+                <h1 class="landing-title">Everything Your Kitchen &amp; Home Needs</h1>
+                <p class="landing-text">Discover durable glassware, complete cookware sets, practical kitchen utensils, and smart plastic organizers at the best prices in Egypt.</p>
+                <div class="landing-buttons">
+                    <a href="#offers" class="btn btn-primary">Shop Offers</a>
+                    <a href="#glassware" class="btn btn-outline">Browse Categories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers" class="section offers-section">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <p class="section-subtitle">Limited-time deals on our best-selling household items</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="offer-badge">Sale</span>
+                    <img src="images/landing1.png" alt="Non-Stick Cookware Set" class="product-img">
+                    <h3 class="product-title">10-Piece Non-Stick Cookware Set</h3>
+                    <p class="old-price">3200 LE</p>
+                    <p class="price">2450 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="offer-badge">Sale</span>
+                    <img src="images/landing5.png" alt="Ceramic Cups & Saucers Set" class="product-img">
+                    <h3 class="product-title">Colorful Ceramic Cups &amp; Saucers Set</h3>
+                    <p class="old-price">950 LE</p>
+                    <p class="price">690 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="offer-badge">Sale</span>
+                    <img src="images/landing3.png" alt="Airtight Storage Containers" class="product-img">
+                    <h3 class="product-title">4-Piece Airtight Food Container Set</h3>
+                    <p class="old-price">420 LE</p>
+                    <p class="price">290 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="offer-badge">Sale</span>
+                    <img src="images/landing4.png" alt="Wall Tool Holders" class="product-img">
+                    <h3 class="product-title">4-Pack Wall Mounted Mop &amp; Tool Holders</h3>
+                    <p class="old-price">250 LE</p>
+                    <p class="price">165 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="glassware" class="section category-section glassware-section">
+        <div class="container">
+            <h2 class="section-title light-title">Glassware</h2>
+            <p class="section-subtitle light-subtitle">Crystal-clear pitchers, drinking glasses, bowls, and storage jars</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/glass1.jpg" alt="Borosilicate Glass Water Pitcher" class="product-img">
+                    <h3 class="product-title">Borosilicate Glass Pitcher with Bamboo Lid</h3>
+                    <p class="price">380 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass2.jpg" alt="6-Piece Crystal Drinking Glasses" class="product-img">
+                    <h3 class="product-title">6-Piece Crystal Drinking Glasses Set</h3>
+                    <p class="price">295 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass3.jpg" alt="Deep Tempered Glass Mixing Bowl" class="product-img">
+                    <h3 class="product-title">Deep Tempered Glass Salad &amp; Mixing Bowl</h3>
+                    <p class="price">240 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass4.jpg" alt="4-Piece Glass Jars with Wooden Lids" class="product-img">
+                    <h3 class="product-title">4-Piece Glass Storage Jars with Wooden Lids</h3>
+                    <p class="price">340 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="more-glassware" class="products-grid more-products">
+                <div class="product-card">
+                    <img src="images/glass5.jpg" alt="6-Piece Clear Glass Tea Mugs" class="product-img">
+                    <h3 class="product-title">6-Piece Clear Glass Tea Mugs with Handles</h3>
+                    <p class="price">260 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass6.jpg" alt="Rectangular Oven-Safe Glass Baking Dish" class="product-img">
+                    <h3 class="product-title">Oven-Safe Rectangular Glass Baking Tray</h3>
+                    <p class="price">410 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass7.jpg" alt="Glass Oil & Vinegar Dispenser Set" class="product-img">
+                    <h3 class="product-title">2-Piece Glass Oil &amp; Vinegar Dispenser Bottles</h3>
+                    <p class="price">220 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/glass8.jpg" alt="Glass Food Storage Bowls with Orange Lids" class="product-img">
+                    <h3 class="product-title">3-Piece Glass Bowls with Airtight Orange Lids</h3>
+                    <p class="price">350 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-container">
+                <button class="more-btn" data-target="more-glassware">More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sets" class="section category-section sets-section">
+        <div class="container">
+            <h2 class="section-title light-title">Cookware Sets</h2>
+            <p class="section-subtitle light-subtitle">Complete cooking pots, dining sets, and frying pan collections</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/set1.png" alt="Full Non-Stick Pots & Pans Set" class="product-img">
+                    <h3 class="product-title">Complete Non-Stick Pots &amp; Utensils Set</h3>
+                    <p class="price">2650 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set2.png" alt="12-Piece Cups & Plates Tableware Set" class="product-img">
+                    <h3 class="product-title">12-Piece Multi-Color Cups &amp; Plates Set</h3>
+                    <p class="price">780 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set3.jpg" alt="Heavy-Duty Granite Casserole Set" class="product-img">
+                    <h3 class="product-title">Heavy-Duty Dark Granite Casserole Set</h3>
+                    <p class="price">3100 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set4.jpg" alt="3-Piece Non-Stick Frying Pan Set" class="product-img">
+                    <h3 class="product-title">3-Piece Granite Non-Stick Frying Pan Set</h3>
+                    <p class="price">1150 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="more-sets" class="products-grid more-products">
+                <div class="product-card">
+                    <img src="images/set5.jpg" alt="16-Piece Ceramic Dinnerware Set" class="product-img">
+                    <h3 class="product-title">16-Piece White &amp; Orange Porcelain Dinner Set</h3>
+                    <p class="price">1850 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set6.jpg" alt="Stainless Steel Turkish Coffee Pot Set" class="product-img">
+                    <h3 class="product-title">5-Piece Stainless Steel Coffee &amp; Milk Pot Set</h3>
+                    <p class="price">640 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set7.jpg" alt="Enamel Cast Iron Dutch Oven Pot" class="product-img">
+                    <h3 class="product-title">Heavy Enamel Cast Iron Casserole Pot</h3>
+                    <p class="price">1950 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/set8.jpg" alt="Professional Stainless Steel Cookware Set" class="product-img">
+                    <h3 class="product-title">8-Piece Stainless Steel Cookware Set</h3>
+                    <p class="price">3400 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-container">
+                <button class="more-btn" data-target="more-sets">More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="utensils" class="section category-section utensils-section">
+        <div class="container">
+            <h2 class="section-title light-title">Kitchen Utensils</h2>
+            <p class="section-subtitle light-subtitle">Handy daily tools, holders, brushes, and preparation accessories</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/utensil1.png" alt="Wooden Brushes with Wall Holders" class="product-img">
+                    <h3 class="product-title">3-Piece Wooden Brushes with Holders</h3>
+                    <p class="price">190 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil2.png" alt="Self-Adhesive Broom & Tool Clips" class="product-img">
+                    <h3 class="product-title">Self-Adhesive Broom &amp; Towel Clips</h3>
+                    <p class="price">165 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil3.jpg" alt="Silicone Spoons & Spatula Set with Holder" class="product-img">
+                    <h3 class="product-title">7-Piece Silicone Cooking Utensils with Holder</h3>
+                    <p class="price">360 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil4.jpg" alt="Stainless Steel Box Grater & Peeler Set" class="product-img">
+                    <h3 class="product-title">4-Sided Stainless Steel Grater &amp; Peeler</h3>
+                    <p class="price">210 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="more-utensils" class="products-grid more-products">
+                <div class="product-card">
+                    <img src="images/utensil5.jpg" alt="3-Piece Wooden Cutting Boards with Stand" class="product-img">
+                    <h3 class="product-title">3-Piece Wooden Cutting Boards with Stand</h3>
+                    <p class="price">450 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil6.jpg" alt="Stainless Steel Whisk Tongs Ladle Strainer Set" class="product-img">
+                    <h3 class="product-title">4-Piece Stainless Whisk, Tongs &amp; Strainer Set</h3>
+                    <p class="price">290 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil7.jpg" alt="Chef Knife & Wooden Chopping Board Set" class="product-img">
+                    <h3 class="product-title">Professional Chef Knife &amp; Oak Cutting Board</h3>
+                    <p class="price">580 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/utensil8.jpg" alt="Olive Wood Cooking Spoons Set" class="product-img">
+                    <h3 class="product-title">5-Piece Natural Wood Cooking Spoons Set</h3>
+                    <p class="price">275 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-container">
+                <button class="more-btn" data-target="more-utensils">More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="plastics" class="section category-section plastics-section">
+        <div class="container">
+            <h2 class="section-title light-title">Plastics</h2>
+            <p class="section-subtitle light-subtitle">BPA-free food boxes, baskets, bottles, and multi-drawer organizers</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/plastic1.png" alt="4-Piece Clear Plastic Food Boxes" class="product-img">
+                    <h3 class="product-title">4-Piece Colored Lid Food Storage Boxes</h3>
+                    <p class="price">290 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic2.jpg" alt="Ventilated Plastic Storage Baskets" class="product-img">
+                    <h3 class="product-title">4-Piece Ventilated Kitchen Organizer Baskets</h3>
+                    <p class="price">175 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic3.jpg" alt="3-Piece BPA-Free Water Bottles" class="product-img">
+                    <h3 class="product-title">3-Piece BPA-Free Fridge Water Bottles</h3>
+                    <p class="price">210 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic4.jpg" alt="3-Tier Plastic Storage Drawer Unit" class="product-img">
+                    <h3 class="product-title">3-Tier Countertop Plastic Drawer Unit</h3>
+                    <p class="price">460 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="more-plastics" class="products-grid more-products">
+                <div class="product-card">
+                    <img src="images/plastic5.jpg" alt="3-Piece Plastic Kitchen Colander Set" class="product-img">
+                    <h3 class="product-title">3-Piece Colorful Plastic Colander &amp; Strainer Set</h3>
+                    <p class="price">185 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic6.jpg" alt="2-Tier Plastic Dish Drying Rack" class="product-img">
+                    <h3 class="product-title">2-Tier Plastic Dish Drainer Rack with Caddy</h3>
+                    <p class="price">520 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic7.jpg" alt="4-Piece Airtight Dry Food Dispensers" class="product-img">
+                    <h3 class="product-title">4-Piece Tall Airtight Cereal &amp; Pasta Containers</h3>
+                    <p class="price">390 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plastic8.jpg" alt="Stackable Clear Fridge Organizer Bins" class="product-img">
+                    <h3 class="product-title">4-Piece Stackable Clear Fridge Organizer Bins</h3>
+                    <p class="price">440 LE</p>
+                    <div class="card-actions">
+                        <button class="add-btn">Add to Cart</button>
+                        <button class="delete-btn">Delete from Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-container">
+                <button class="more-btn" data-target="more-plastics">More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Have a question or want to place an order? Send us a message</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Get in Touch</h3>
+                    <p class="contact-item"><strong>Phone:</strong> +20 100 123 4567</p>
+                    <p class="contact-item"><strong>Email:</strong> support@homecooking-eg.com</p>
+                    <p class="contact-item"><strong>Working Hours:</strong> Daily from 10:00 AM to 10:00 PM</p>
+                    <p class="contact-item"><strong>Delivery:</strong> Fast shipping to all governorates in Egypt</p>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                    <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                    <input type="tel" id="phone" class="form-input" placeholder="Your Phone Number" required>
+                    <textarea id="message" class="form-textarea" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="footer-text">&copy; 2026 HomeCooking Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
